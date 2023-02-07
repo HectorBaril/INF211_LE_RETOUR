@@ -1,0 +1,57 @@
+version: "3.7"
+
+volumes:
+  maven:
+
+services:
+  db:
+    container_name: db
+    hostname: serv_postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpwd
+      POSTGRES_DB: cabinet_recrutement_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sources/psql/creation_base_recrutement.sql:/docker-entrypoint-initdb.d/creation_base_recrutement.sql
+  
+  pgadmin4:
+    container_name: pgadmin4
+    hostname: pgadmin4
+    image: dpage/pgadmin4:6.18
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pguser@admin.com
+      PGADMIN_DEFAULT_PASSWORD: pgpwd
+        #- PGADMIN_CONFIG_SERVER_MODE: True
+    ports:
+      - "8081:80"
+    volumes:
+      - ./sources/pgadmin4/servers.json:/pgadmin4/servers.json
+      - ./sources/pgadmin4/storage:/var/lib/pgadmin/storage #A commenter si pgadmin4 ne démarre pas
+    depends_on:
+      - "db"
+
+  wildfly:
+    container_name: wildfly
+    image: servapp_wildfly
+    hostname: wildfly-serv
+    build:
+      context: ./sources/wildfly
+    ports:
+      - "8080:8080"
+      - "9990:9990" 
+    depends_on:
+      - "pgadmin4"
+
+  maven:
+    image: envdev_inf211
+    build:
+      context: ./sources/maven
+    volumes:
+      - maven:/root/
+      - ../dev/cabinet_recrutement:/app
+    depends_on:
+      - "wildfly"

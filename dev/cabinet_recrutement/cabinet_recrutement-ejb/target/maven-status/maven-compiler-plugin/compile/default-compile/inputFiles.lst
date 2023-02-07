@@ -1,0 +1,4 @@
+/app/cabinet_recrutement-ejb/src/main/java/eu/telecom_bretagne/cabinet_recrutement/service/IServiceEntreprise.java
+/app/cabinet_recrutement-ejb/src/main/java/eu/telecom_bretagne/cabinet_recrutement/data/model/Entreprise.java
+/app/cabinet_recrutement-ejb/src/main/java/eu/telecom_bretagne/cabinet_recrutement/service/ServiceEntreprise.java
+/app/cabinet_recrutement-ejb/src/main/java/eu/telecom_bretagne/cabinet_recrutement/data/dao/EntrepriseDAO.java

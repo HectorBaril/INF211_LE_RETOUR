@@ -1,0 +1,4 @@
+eu/telecom_bretagne/cabinet_recrutement/front/utils/Utils.class
+eu/telecom_bretagne/cabinet_recrutement/front/controlesDAO/ControlesDAOServlet.class
+eu/telecom_bretagne/cabinet_recrutement/front/utils/ServicesLocatorException.class
+eu/telecom_bretagne/cabinet_recrutement/front/utils/ServicesLocator.class

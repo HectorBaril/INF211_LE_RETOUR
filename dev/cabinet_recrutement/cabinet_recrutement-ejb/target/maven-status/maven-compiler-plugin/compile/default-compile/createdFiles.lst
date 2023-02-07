@@ -1,0 +1,4 @@
+eu/telecom_bretagne/cabinet_recrutement/data/dao/EntrepriseDAO.class
+eu/telecom_bretagne/cabinet_recrutement/service/IServiceEntreprise.class
+eu/telecom_bretagne/cabinet_recrutement/data/model/Entreprise.class
+eu/telecom_bretagne/cabinet_recrutement/service/ServiceEntreprise.class
