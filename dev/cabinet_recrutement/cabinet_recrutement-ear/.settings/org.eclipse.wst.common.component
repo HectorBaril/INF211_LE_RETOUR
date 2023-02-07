@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="cabinet_recrutement-ear">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="jakarta.ejb-api-4.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/ejb/jakarta.ejb-api/4.0.1/jakarta.ejb-api-4.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.transaction-api-2.0.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.enterprise.cdi-api-4.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/enterprise/jakarta.enterprise.cdi-api/4.0.1/jakarta.enterprise.cdi-api-4.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.enterprise.lang-model-4.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/enterprise/jakarta.enterprise.lang-model/4.0.1/jakarta.enterprise.lang-model-4.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.annotation-api-2.1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/annotation/jakarta.annotation-api/2.1.0/jakarta.annotation-api-2.1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.el-api-5.0.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/el/jakarta.el-api/5.0.0/jakarta.el-api-5.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.interceptor-api-2.1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/interceptor/jakarta.interceptor-api/2.1.0/jakarta.interceptor-api-2.1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.inject-api-2.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.persistence-api-3.1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.jws-api-3.0.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/jws/jakarta.jws-api/3.0.0/jakarta.jws-api-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="maven-plugin-api-3.8.6.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/apache/maven/maven-plugin-api/3.8.6/maven-plugin-api-3.8.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="maven-model-3.8.6.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/apache/maven/maven-model/3.8.6/maven-model-3.8.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="maven-artifact-3.8.6.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/apache/maven/maven-artifact/3.8.6/maven-artifact-3.8.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.8.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.eclipse.sisu.plexus-0.3.5.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.5/org.eclipse.sisu.plexus-0.3.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.annotation-api-1.2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.eclipse.sisu.inject-0.3.5.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.5/org.eclipse.sisu.inject-0.3.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="plexus-component-annotations-1.5.5.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="plexus-utils-3.3.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/codehaus/plexus/plexus-utils/3.3.1/plexus-utils-3.3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="plexus-classworlds-2.6.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
