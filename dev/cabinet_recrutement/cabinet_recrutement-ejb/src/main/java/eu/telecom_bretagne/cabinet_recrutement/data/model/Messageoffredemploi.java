@@ -5,9 +5,12 @@ package eu.telecom_bretagne.cabinet_recrutement.data.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 /**
@@ -20,7 +23,7 @@ import jakarta.persistence.Table;
 public class Messageoffredemploi  implements java.io.Serializable {
 
 
-     private int id;
+     
      private Candidature candidature;
      private Offresemploi offresemploi;
      private String dateenvoi;
@@ -43,7 +46,10 @@ public class Messageoffredemploi  implements java.io.Serializable {
        this.corpsmessage = corpsmessage;
     }
    
-     @Id 
+    @Id
+    @SequenceGenerator(name="MESSAGEOFFREDEMPLOI_ID_GENERATOR", sequenceName="MESSAGEOFFREDEMPLOI_ID_SEQ", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="MESSAGEOFFREDEMPLOI_ID_GENERATOR")
+    private Integer id;
 
     
     @Column(name="id", unique=true, nullable=false)
