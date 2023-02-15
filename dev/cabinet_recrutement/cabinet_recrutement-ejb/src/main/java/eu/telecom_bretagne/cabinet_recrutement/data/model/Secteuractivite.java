@@ -7,8 +7,11 @@ import java.util.Set;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 /**
@@ -21,7 +24,6 @@ import jakarta.persistence.Table;
 public class Secteuractivite  implements java.io.Serializable {
 
 
-     private int id;
      private String intitule;
      private Set<Secteuroffre> secteuroffres = new HashSet<Secteuroffre>(0);
      private Set<Secteurcandidat> secteurcandidats = new HashSet<Secteurcandidat>(0);
@@ -41,8 +43,10 @@ public class Secteuractivite  implements java.io.Serializable {
        this.secteurcandidats = secteurcandidats;
     }
    
-     @Id 
-
+    @Id
+    @SequenceGenerator(name="SECTEURACTIVITE_ID_GENERATOR", sequenceName="SECTEURACTIVITE_ID_SEQ", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SECTEURACTIVITE_ID_GENERATOR")
+    private Integer id;
     
     @Column(name="id", unique=true, nullable=false)
     public int getId() {

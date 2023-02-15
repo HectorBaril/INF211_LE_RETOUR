@@ -7,10 +7,13 @@ import java.util.Set;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 /**
@@ -23,7 +26,6 @@ import jakarta.persistence.Table;
 public class Offresemploi  implements java.io.Serializable {
 
 
-     private int id;
      private Niveauqualification niveauqualification;
      private String titre;
      private String descriptifmission;
@@ -55,8 +57,10 @@ public class Offresemploi  implements java.io.Serializable {
        this.messageoffredemplois = messageoffredemplois;
     }
    
-     @Id 
-
+    @Id
+    @SequenceGenerator(name="OFFRESEMPLOI_ID_GENERATOR", sequenceName="OFFRESEMPLOI_ID_SEQ", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="OFFRESEMPLOI_ID_GENERATOR")
+    private Integer id;
     
     @Column(name="id", unique=true, nullable=false)
     public int getId() {
