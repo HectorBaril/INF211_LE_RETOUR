@@ -20,7 +20,7 @@ services:
   pgadmin4:
     container_name: pgadmin4
     hostname: pgadmin4
-    image: dpage/pgadmin4:6.18
+    image: dpage/pgadmin4:6.20
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: pguser@admin.com
