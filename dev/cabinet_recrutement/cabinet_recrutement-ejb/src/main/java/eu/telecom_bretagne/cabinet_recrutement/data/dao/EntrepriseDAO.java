@@ -7,6 +7,9 @@ import java.util.List;
 // import javax.persistence.EntityManager;
 // import javax.persistence.PersistenceContext;
 // import javax.persistence.Query;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jakarta.ejb.LocalBean;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
@@ -23,6 +26,7 @@ import eu.telecom_bretagne.cabinet_recrutement.data.model.Entreprise;
 @LocalBean
 public class EntrepriseDAO
 {
+  private static final Logger logger = Logger.getLogger(CandidatureDAO.class.getName());
   //-----------------------------------------------------------------------------
   /**
    * Référence vers le gestionnaire de persistance.
@@ -40,8 +44,17 @@ public class EntrepriseDAO
   //-----------------------------------------------------------------------------
   public Entreprise findById(Integer id)
   {
-    return entityManager.find(Entreprise.class, id);
-  }
+        logger.log(Level.INFO, "getting Entreprise instance with id: " + id);
+        try {
+            Entreprise instance = entityManager.find(Entreprise.class, id);
+            logger.log(Level.INFO, "get successful");
+            return instance;
+        }
+        catch (RuntimeException re) {
+            logger.log(Level.SEVERE, "get failed", re);
+            throw re;
+        }
+    }
   //----------------------------------------------------------------------------
   @SuppressWarnings({ "rawtypes", "unchecked" })
   public List<Entreprise> findAll()
