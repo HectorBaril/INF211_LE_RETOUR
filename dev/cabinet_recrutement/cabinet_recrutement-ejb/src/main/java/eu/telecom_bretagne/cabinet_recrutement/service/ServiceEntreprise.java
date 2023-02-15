@@ -1,6 +1,6 @@
 package eu.telecom_bretagne.cabinet_recrutement.service;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 // import javax.ejb.EJB;
@@ -10,7 +10,7 @@ import java.util.List;
 import jakarta.ejb.EJB;
 import jakarta.ejb.LocalBean;
 import jakarta.ejb.Stateless;
-import jakarta.jws.WebService;
+//import jakarta.jws.WebService;
 
 import eu.telecom_bretagne.cabinet_recrutement.data.dao.EntrepriseDAO;
 import eu.telecom_bretagne.cabinet_recrutement.data.model.Entreprise;
